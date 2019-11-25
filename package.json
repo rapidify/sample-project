@@ -1,0 +1,30 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore .",
+    "lint:fix": "./node_modules/.bin/eslint --fix . --ignore-path .gitignore ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rapidify-core": "git+https://github.com/rapidify/rapidify-core.git#framework-restructuring"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.1",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.1"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}
