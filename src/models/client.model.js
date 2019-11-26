@@ -1,9 +1,11 @@
 const { BaseModel } = require('rapidify-core');
-const { model, Schema } = require('mongoose');
+const { model } = require('mongoose');
+
+const { ClientSchema } = require('../schemas');
 
 class ClientModel extends BaseModel {
   constructor() {
-    super({ Model: model('Client', new Schema({})) });
+    super({ Model: model('Client', ClientSchema) });
   }
 }
 
